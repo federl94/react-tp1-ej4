@@ -1,7 +1,6 @@
 import './App.css';
 import  'bootstrap/dist/css/bootstrap.min.css' ;
 import Formtarea from "./components/Formtarea";
-import Itemtarea from './components/Itemtarea';
 
 function App() {
 
@@ -14,12 +13,10 @@ function App() {
       <h3>Ingresá tus tareas</h3>
       <br />
       <section>
-        <Formtarea></Formtarea>
-        <br />
-        <Itemtarea></Itemtarea>
+        <Formtarea></Formtarea>        
       </section>
-      <footer>
-        <p>Todos los derechos reservados &</p>
+      <footer className='mt-3'>
+        <p>&copy; Todos los derechos reservados</p>
       </footer>
     </main>
     </>

@@ -1,10 +1,7 @@
 import { ListGroup } from "react-bootstrap";
 
-const ItemTarea = () => {
-  return <ListGroup>
-      <ListGroup.Item></ListGroup.Item>
-      
-  </ListGroup>;
+const ItemTarea = ({tarea}) => {
+  return <ListGroup.Item>{tarea}</ListGroup.Item>;
 };
 
 export default ItemTarea;

@@ -1,11 +1,16 @@
 import { Form, Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ListaTareas from "./Listatareas";
 
 
 const formTarea = () => {
+  const tareasDelLocalStorage = JSON.parse(localStorage.getItem('listaTareas')) || [];
   const [tarea, setTarea] = useState("");
-  const [tareas, setTareas] = useState([]);
+  const [tareas, setTareas] = useState(tareasDelLocalStorage);
+
+  useEffect(()=> {
+    localStorage.setItem('listaTareas', JSON.stringify(tareas))    
+  }, [tareas])
 
   const btnEnviar = (e) => {
     e.preventDefault();
